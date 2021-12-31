@@ -1,0 +1,44 @@
+.skills {
+  padding: $mainPadding 0;
+  position: relative;
+  .container {
+    display: flex;
+    align-items: center;
+    .skills-container {
+      flex: 1;
+      .skill {
+        h3 {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            font-size: 12px;
+            border: 1px solid #ccc;
+            padding: 3px 5px;
+            border-radius: 4px;
+            color: $mainColor;
+          }
+        }
+        .progress {
+          height: 30px;
+          background-color: #eee;
+          position: relative;
+          border-radius: 10px;
+          span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background-color: $mainColor;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    img {
+      display: none;
+    }
+  }
+}

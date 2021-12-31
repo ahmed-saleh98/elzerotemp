@@ -1,0 +1,106 @@
+.discount {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  .content {
+    text-align: center;
+    padding: 0 20px;
+    .h2,
+    .p {
+      overflow: hidden;
+    }
+    h2 {
+      font-size: 40px;
+      letter-spacing: -2px;
+      margin: 2rem 0;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 18px;
+      max-width: 500px;
+      margin: 0;
+    }
+    img {
+      width: 300px;
+      max-width: 100%;
+    }
+  }
+  .image {
+    background-image: url("../../images/discount-background1.WebP");
+    background-size: cover;
+    color: white;
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    animation: change-background 10s linear infinite;
+    @keyframes change-background {
+      0%,
+      100% {
+        background-image: url("../../images/discount-background1.WebP");
+      }
+      50% {
+        background-image: url("../../images/discount-background2.WebP");
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(23 135 224 / 97%);
+      z-index: -1;
+    }
+    @media (max-width: 767px) {
+      flex-basis: 100%;
+    }
+  }
+  .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 50%;
+    padding-bottom: 50px;
+    @media (max-width: 767px) {
+      flex-basis: 100%;
+    }
+    .input {
+      overflow: hidden;
+    }
+    input {
+      border-radius: 10px;
+      border: none;
+      border-bottom: 2px solid $mainColor;
+      background-color: #f9f9f9;
+      caret-color: $mainColor;
+      &:focus {
+        outline: none;
+        box-shadow: inset 0 0 5px 1px #2196f3;
+      }
+    }
+    textarea {
+      @extend input;
+      resize: none;
+      height: 200px;
+    }
+    [type="submit"] {
+      border-radius: 10px;
+      width: 100%;
+      padding: 15px;
+      background-color: $mainColor;
+      font-weight: bold;
+      font-size: 20px;
+      &:hover {
+        background-color: $mainColorAlt;
+      }
+      &:disabled {
+        pointer-events: all;
+        opacity: 1;
+      }
+    }
+  }
+}

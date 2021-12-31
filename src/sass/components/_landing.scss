@@ -1,0 +1,76 @@
+.landing {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 100%;
+    height: 100%;
+    background-color: $sectionColor;
+    z-index: -1;
+    transform: skewY(-6deg);
+    transform-origin: top left;
+  }
+
+  .container {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    padding-bottom: 120px;
+    .text {
+      flex: 1;
+      @media (max-width: 991px) {
+        text-align: center;
+      }
+      h1 {
+        font-size: 40px;
+        margin: 0;
+        letter-spacing: -2px;
+        overflow: hidden;
+        @media (max-width: 767px) {
+          font-size: 28px;
+        }
+      }
+      .p {
+        font-size: 23px;
+        line-height: 1.7;
+        margin: 5px 0 0;
+        color: #666;
+        max-width: 500px;
+        overflow: hidden;
+        @media (max-width: 991px) {
+          margin: 10px auto;
+        }
+        @media (max-width: 767px) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .image {
+      @media (max-width: 991px) {
+        display: none;
+      }
+      img {
+        position: relative;
+        width: 600px;
+      }
+    }
+  }
+
+  .go-down {
+    color: $mainColor;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: $mainTransition;
+    font-size: 2em;
+    &:hover {
+      color: $mainColorAlt;
+    }
+  }
+}

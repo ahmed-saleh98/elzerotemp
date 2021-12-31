@@ -1,0 +1,64 @@
+.articles {
+  padding: $mainPadding 0;
+  position: relative;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    .box {
+      box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+      background-color: white;
+      border-radius: 6px;
+      overflow: hidden;
+      transition: $mainTransition;
+      &:hover {
+        transform: translateY(-10px) !important;
+        box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+      }
+      &:hover .info svg {
+        animation: moving-arrow 0.5s linear infinite;
+      }
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+      .content {
+        padding: 20px;
+        h3 {
+          margin: 0;
+        }
+        p {
+          margin: 10px 0 0;
+          line-height: 1.5;
+          color: #777;
+        }
+      }
+      .info {
+        padding: 20px;
+        border-top: 1px solid #e6e6e7;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+          color: $mainColor;
+          font-weight: bold;
+        }
+        svg {
+          color: $mainColor;
+          @keyframes moving-arrow {
+            0% {
+              transform: translateX(0px);
+            }
+            50% {
+              transform: translateX(10px);
+            }
+            100% {
+              transform: translateX(0px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.made-by {
+  margin-top: 20px;
+  border-top: 1px solid $sectionColor;
+  color: $sectionColor;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 25px;
+    align-items: center;
+    padding: 15px 0;
+    @media (max-width: 767px) {
+      justify-content: center;
+    }
+    ul {
+      display: flex;
+      gap: 15px;
+      a {
+        transition: $mainTransition;
+        color: $sectionColor;
+        font-size: 30px;
+      }
+      .facebook:hover {
+        color: #0f90f3;
+      }
+      .twitter:hover {
+        color: #00a9e8;
+      }
+      .whatsapp:hover {
+        color: #4bc658;
+      }
+      .website:hover {
+        color: #005082;
+      }
+      .linkedin:hover {
+        color: #0270ad;
+      }
+      .github:hover {
+        color: #333;
+      }
+      .codepen:hover {
+        color: #fcd000;
+      }
+      .mail:hover {
+        color: #ca1e1c;
+      }
+    }
+    p {
+      margin: 0;
+    }
+  }
+}

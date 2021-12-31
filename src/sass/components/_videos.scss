@@ -1,0 +1,58 @@
+.videos {
+  padding: $mainPadding 0;
+  .holder {
+    display: flex;
+    justify-content: center;
+    background-color: $sectionColor;
+    border: 1px solid #ddd;
+    @media (max-width: 991px) {
+      flex-direction: column;
+    }
+    .list {
+      min-width: 300px;
+      background-color: white;
+      .name {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #f4f4f4;
+        font-weight: bold;
+        color: $mainColor;
+      }
+      ul {
+        overflow: hidden;
+        li {
+          padding: 20px;
+          border-top: 1px solid $sectionColor;
+          cursor: pointer;
+          transition: $mainTransition;
+          &:hover {
+            background-color: #fafafa;
+            color: $mainColor;
+          }
+          span {
+            display: block;
+            margin-top: 10px;
+            color: #777;
+          }
+        }
+      }
+    }
+    .preview {
+      background-color: #e2e2e2;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      img {
+        max-width: 100%;
+      }
+      .info {
+        padding: 20px;
+        background-color: white;
+        margin-top: 10px;
+      }
+    }
+  }
+}

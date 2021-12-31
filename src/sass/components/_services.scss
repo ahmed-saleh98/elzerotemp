@@ -1,0 +1,79 @@
+.services {
+  padding: $mainPadding 0;
+  position: relative;
+  background-color: $sectionColor;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    .box {
+      background-color: white;
+      box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+      counter-increment: services;
+      transition: $mainTransition;
+      position: relative;
+      overflow: hidden;
+      &::before {
+        content: "";
+        left: 50%;
+        transform: translateX(-50%);
+        height: 3px;
+        top: 2px;
+        background-color: $mainColor;
+        position: absolute;
+        width: 0;
+        transition: $mainTransition;
+      }
+      &:hover {
+        transform: translateY(-10px);
+        &::before {
+          width: 100%;
+        }
+      }
+      svg {
+        margin: 30px auto 20px;
+        display: block;
+        text-align: center;
+        color: #d5d5d5;
+        font-size: 4.5rem;
+      }
+      h3 {
+        text-align: center;
+        margin: 20px 0 40px;
+        font-size: 25px;
+        color: $mainColor;
+      }
+      .info {
+        padding: 15px;
+        position: relative;
+        background-color: #f9f9f9;
+        text-align: right;
+        &::before {
+          content: "0" counter(services);
+          position: absolute;
+          background-color: $mainColor;
+          color: white;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100px;
+          font-size: 30px;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          background-color: #d5d5d5;
+          top: 0;
+          left: 80px;
+          width: 50px;
+          height: calc(100% + 0.4px);
+          transform: skewX(-30deg);
+        }
+      }
+    }
+  }
+}

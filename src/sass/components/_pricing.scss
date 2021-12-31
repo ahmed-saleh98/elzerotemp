@@ -1,0 +1,119 @@
+.pricing {
+  padding: $mainPadding 0;
+  position: relative;
+  background-color: $sectionColor;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    .box {
+      position: relative;
+      box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+      transition: $mainTransition;
+      background: white;
+      text-align: center;
+      z-index: 1;
+      &::before,
+      &::after {
+        content: "";
+        width: 0;
+        height: 50%;
+        background-color: #f6f6f6;
+        position: absolute;
+        z-index: -1;
+        transition: $mainTransition;
+      }
+      &::before {
+        left: 0;
+        top: 0;
+      }
+      &::after {
+        right: 0;
+        bottom: 0;
+      }
+      &:hover {
+        &::before,
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &.popular {
+        @media (min-width: 1200px) {
+          top: -20px;
+        }
+        .label {
+          position: absolute;
+          writing-mode: vertical-rl;
+          background-color: $mainColor;
+          color: white;
+          font-weight: bold;
+          padding: 10px 10px 35px 10px;
+          font-size: 18px;
+          right: 20px;
+          width: 40px;
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-style: solid;
+            border-color: transparent transparent white;
+            border-width: 20px;
+          }
+        }
+      }
+      .title {
+        font-weight: bold;
+        margin: 30px 0;
+        font-size: 25px;
+        letter-spacing: -1px;
+      }
+      img {
+        width: 80px;
+        margin-bottom: 30px;
+      }
+      .price {
+        margin-bottom: 20px;
+      }
+      .amount {
+        display: block;
+        font-size: 60px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: $mainColor;
+      }
+      .time {
+        color: #777;
+      }
+      ul {
+        text-align: left;
+        overflow: hidden;
+        li {
+          padding: 20px;
+          border-top: 1px solid #eee;
+          svg {
+            color: $mainColor;
+            margin-right: 10px;
+          }
+        }
+      }
+      a {
+        display: block;
+        width: fit-content;
+        border: 2px solid $mainColor;
+        color: $mainColor;
+        margin: 30px auto 40px;
+        padding: 15px 20px;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: $mainTransition;
+        &:hover {
+          background-color: $mainColorAlt;
+          border-color: $mainColorAlt;
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.events {
+  padding: $mainPadding 0;
+  position: relative;
+  .dots {
+    z-index: -1;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    img {
+      max-width: 450px;
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+    .info {
+      flex: 1;
+      .time {
+        display: flex;
+        align-items: center;
+        margin: 20px auto;
+        gap: 10px;
+        justify-content: center;
+        .unit {
+          border: 1px solid #d4d4d4;
+          border-radius: 5px;
+          text-align: center;
+          width: 80px;
+          transition: $mainTransition;
+          span {
+            display: block;
+            transition: $mainTransition;
+            &:first-child {
+              font-size: 35px;
+              padding: 15px 5px;
+              color: $mainColor;
+              font-weight: bold;
+            }
+            &:last-child {
+              padding: 8px 10px;
+              font-size: 14px;
+              border-top: 1px solid #d4d4d4;
+            }
+          }
+          &:hover {
+            border-color: $mainColor;
+            box-shadow: 0 0 3px $mainColor;
+            span:last-child {
+              border-color: $mainColor;
+            }
+          }
+        }
+      }
+      .title {
+        text-align: center;
+        margin: 40px 0 0;
+        font-size: 30px;
+      }
+      .description {
+        text-align: center;
+        line-height: 1.7;
+        font-size: 19px;
+        color: #777;
+      }
+    }
+    .subscribe {
+      width: 100%;
+      margin-top: 50px;
+      overflow: hidden;
+      form {
+        width: 600px;
+        margin: 20px auto;
+        padding: 30px 40px;
+        background-color: #f6f5f5;
+        border-radius: 50px;
+        display: flex;
+        gap: 20px;
+        @media (max-width: 767px) {
+          max-width: 100%;
+          padding: 20px;
+          flex-direction: column;
+        }
+        input {
+          &[type="email"] {
+            padding: 20px;
+            border-radius: 50px;
+            border: none;
+            flex: 1;
+            caret-color: $mainColor;
+
+            &::placeholder {
+              transition: $mainTransition;
+            }
+            &:focus {
+              outline: none;
+              box-shadow: inset 0 0 5px 1px $mainColor;
+              &::placeholder {
+                opacity: 0;
+              }
+            }
+          }
+          &[type="submit"] {
+            border-radius: 50px;
+            border: none;
+            background-color: $mainColor;
+            color: white;
+            font-weight: bold;
+            padding: 20px;
+            cursor: pointer;
+            transition: $mainTransition;
+            &:hover {
+              background-color: $mainColorAlt;
+            }
+          }
+        }
+      }
+    }
+  }
+}

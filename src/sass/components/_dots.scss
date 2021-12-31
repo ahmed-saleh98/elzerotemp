@@ -1,0 +1,16 @@
+.dots {
+  background-image: url("../../images/dots.WebP");
+  height: 186px;
+  width: 190px;
+  background-repeat: no-repeat;
+  position: absolute;
+  opacity: 0.7;
+}
+.dots-up {
+  top: 200px;
+  right: 0;
+}
+.dots-down {
+  bottom: 200px;
+  left: 0;
+}
