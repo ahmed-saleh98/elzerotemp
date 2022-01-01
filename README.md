@@ -4,8 +4,9 @@
 
 1.  React
 2.  Sass
-3.  Bootstrab
-4.  React-icons
+3.  GreenSock
+4.  Bootstrap
+5.  React-icons
 
 ## Installation
 
