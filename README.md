@@ -4,15 +4,9 @@
 
 1.  React
 2.  Sass
-<<<<<<< HEAD
 3.  GreenSock
 4.  Bootstrap
 5.  React-icons
-=======
-3.  Greensock
-3.  Bootstrab
-4.  React-icons
->>>>>>> 2ca3ca77047ffc0171822c69e383240deffdb0ee
 
 ## Installation
 
