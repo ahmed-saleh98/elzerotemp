@@ -4,6 +4,7 @@
 
 1.  React
 2.  Sass
+3.  Greensock
 3.  Bootstrab
 4.  React-icons
 
