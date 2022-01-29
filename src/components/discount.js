@@ -48,7 +48,7 @@ function Discount() {
       animation2.kill();
       animation3.kill();
     };
-  });
+  }, []);
   return (
     <section className="discount" id="discount">
       <div className="image">

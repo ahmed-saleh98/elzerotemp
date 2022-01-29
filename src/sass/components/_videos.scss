@@ -33,7 +33,7 @@
           span {
             display: block;
             margin-top: 10px;
-            color: #777;
+            color: $pColor;
           }
         }
       }
@@ -52,6 +52,39 @@
         padding: 20px;
         background-color: white;
         margin-top: 10px;
+      }
+    }
+  }
+}
+
+.dark-mode {
+  .videos {
+    .holder {
+      background-color: $sectionDarkColor;
+      border: 1px solid $boxDarkColor;
+    }
+    .list {
+      background-color: $boxDarkColor;
+      .name {
+        background-color: $darkColor;
+      }
+      ul {
+        overflow: hidden;
+        li {
+          border-top: 1px solid $sectionDarkColor;
+          &:hover {
+            background-color: $darkColor;
+          }
+          span {
+            color: $pDarkColor;
+          }
+        }
+      }
+    }
+    .preview {
+      background-color: $sectionDarkColor;
+      .info {
+        background-color: $darkColor;
       }
     }
   }

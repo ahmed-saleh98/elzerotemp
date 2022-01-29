@@ -30,7 +30,7 @@ function Testimonials() {
       scale: 0.3,
     });
     return () => animation.kill();
-  });
+  }, []);
   return (
     <section className="testimonials" id="testimonials">
       <Title>testimonials</Title>

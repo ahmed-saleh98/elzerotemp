@@ -1,10 +1,8 @@
 .navbar {
-  box-shadow: 0 0 5px #666;
+  box-shadow: 0 0 5px $pColor;
   padding: 0 !important;
   .container {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
     @media (max-width: 991px) {
       justify-content: center;
     }
@@ -122,6 +120,26 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+.dark-mode {
+  .navbar-brand,
+  .nav-link {
+    color: #fff !important;
+  }
+  .nav-link:hover {
+    background-color: $boxDarkColor !important;
+  }
+  .mega-menu {
+    background-color: $darkColor !important;
+    .links {
+      li {
+        &:before {
+          background-color: $boxDarkColor !important;
         }
       }
     }

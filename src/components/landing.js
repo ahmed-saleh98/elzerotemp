@@ -52,7 +52,7 @@ function Landing() {
         ease: "power2.inOut",
       });
     return () => animation.kill();
-  });
+  }, []);
   return (
     <section className="landing">
       <Container>

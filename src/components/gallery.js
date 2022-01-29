@@ -27,7 +27,7 @@ function Gallery() {
 
     const animation = fadeIn(tl, [".gallery .box"], { y: 150 });
     return () => animation.kill();
-  });
+  }, []);
   return (
     <section className="gallery" id="gallery">
       <Title>Gallery</Title>

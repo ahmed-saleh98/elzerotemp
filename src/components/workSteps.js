@@ -29,7 +29,7 @@ function WorkSteps() {
       animation1.kill();
       animation2.kill();
     };
-  });
+  }, []);
 
   return (
     <section className="work-steps" id="work-steps">

@@ -107,3 +107,11 @@ footer {
     }
   }
 }
+
+.dark-mode {
+  footer {
+    .box {
+      background-color: transparent !important;
+    }
+  }
+}

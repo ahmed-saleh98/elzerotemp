@@ -12,3 +12,12 @@
     background-size: 30px 30px;
   }
 }
+
+.dark-mode {
+  .spikes {
+    &::after {
+      background-image: linear-gradient(135deg, $darkColor 25%, transparent 25%),
+        linear-gradient(225deg, $darkColor 25%, transparent 25%);
+    }
+  }
+}

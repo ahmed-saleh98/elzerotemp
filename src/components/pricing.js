@@ -44,7 +44,7 @@ function Pricing() {
       animation1.kill();
       animation2.kill();
     };
-  });
+  }, []);
 
   return (
     <section className="pricing" id="pricing">

@@ -45,7 +45,7 @@ function Articles() {
 
     const animation = fadeIn(tl, [".articles .box"], { y: 150 });
     return () => animation.kill();
-  });
+  }, []);
 
   return (
     <section className="articles" id="articles">

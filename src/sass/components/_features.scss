@@ -62,7 +62,7 @@
         font-size: 20px;
         margin: 30px 0;
         padding: 25px;
-        color: #777;
+        color: $pColor;
       }
       a {
         display: block;
@@ -131,6 +131,47 @@
         background: linear-gradient(to right, #03a9f4 50%, white 50%);
         background-size: 200% 100%;
         background-position: right bottom;
+      }
+    }
+  }
+}
+
+.dark-mode {
+  .features {
+    .container {
+      .box {
+        border: 1px solid #333;
+        .img-holder {
+          &::after {
+            border-color: transparent transparent $boxDarkColor transparent;
+          }
+        }
+        &:hover {
+          a {
+            background-position: left bottom;
+          }
+        }
+      }
+      .quality {
+        a {
+          background: linear-gradient(to right, #f44036 50%, $boxDarkColor 50%);
+          background-size: 200% 100%;
+          background-position: right bottom;
+        }
+      }
+      .time {
+        a {
+          background: linear-gradient(to right, #009688 50%, $boxDarkColor 50%);
+          background-size: 200% 100%;
+          background-position: right bottom;
+        }
+      }
+      .passion {
+        a {
+          background: linear-gradient(to right, #03a9f4 50%, $boxDarkColor 50%);
+          background-size: 200% 100%;
+          background-position: right bottom;
+        }
       }
     }
   }

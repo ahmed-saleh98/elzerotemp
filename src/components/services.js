@@ -54,7 +54,7 @@ function Services() {
       animation1.kill();
       animation2.kill();
     };
-  });
+  }, []);
 
   return (
     <section className="services" id="services">

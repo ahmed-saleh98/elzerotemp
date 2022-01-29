@@ -48,7 +48,7 @@ function Team() {
       animation1.kill();
       animation2.kill();
     };
-  });
+  }, []);
 
   return (
     <section className="team" id="team">

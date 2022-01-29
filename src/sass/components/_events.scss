@@ -61,7 +61,7 @@
         text-align: center;
         line-height: 1.7;
         font-size: 19px;
-        color: #777;
+        color: $pColor;
       }
     }
     .subscribe {
@@ -114,6 +114,16 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+.dark-mode {
+  .events {
+    .subscribe {
+      form {
+        background-color: $sectionDarkColor;
       }
     }
   }

@@ -2,6 +2,8 @@ import React from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import logo from "../images/aslogo.WebP";
 import MegaMenu from "./megaMenu";
+import DarkTheme from "./darkMode";
+
 function NavBar() {
   return (
     <Navbar>
@@ -15,6 +17,7 @@ function NavBar() {
           />{" "}
           Ahmed Saleh
         </Navbar.Brand>
+        <DarkTheme />
         <Nav as="ul">
           <Nav.Item as="li">
             <Nav.Link href="#articles">Articles</Nav.Link>

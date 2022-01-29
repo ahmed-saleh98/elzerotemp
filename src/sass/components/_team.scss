@@ -64,7 +64,7 @@
             justify-content: center;
             align-items: center;
             svg {
-              color: #777;
+              color: $pColor;
               transition: $mainTransition;
             }
             &:hover {
@@ -79,13 +79,34 @@
         padding-left: 80px;
         h3 {
           margin-top: 10px;
-          color: #777;
+          color: $pColor;
           font-size: 22px;
           transition: $mainTransition;
         }
         p {
           margin-top: 10px;
           margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}
+
+.dark-mode {
+  .team {
+    .container {
+      .box {
+        background-color: transparent !important;
+        h3,
+        svg {
+          color: $pDarkColor;
+        }
+        &::after,
+        &::before {
+          background-color: rgba($boxDarkColor, 50%);
+        }
+        &::after {
+          background-color: $boxDarkColor;
         }
       }
     }

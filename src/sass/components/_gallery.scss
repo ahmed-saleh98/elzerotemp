@@ -51,3 +51,9 @@
     }
   }
 }
+
+.dark-mode {
+  .gallery {
+    background-color: $sectionDarkColor;
+  }
+}

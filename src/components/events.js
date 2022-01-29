@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect } from "react";
 
 import { Container } from "react-bootstrap";
 
@@ -11,8 +11,9 @@ import { fadeIn } from "./articles";
 import img from "../images/events.WebP";
 
 function Events() {
-  useLayoutEffect(() => {
-    let countDownDate = new Date("Mar 1, 2023 00:00:00").getTime();
+  let countDownDate = new Date("Mar 1, 2023 00:00:00").getTime();
+
+  useEffect(() => {
     // make CountDown Timer
 
     let counter = setInterval(() => {
@@ -71,6 +72,7 @@ function Events() {
       "start"
     );
     return () => {
+      clearInterval(counter);
       animation1.kill();
       animation2.kill();
       animation3.kill();
@@ -78,7 +80,7 @@ function Events() {
       animation5.kill();
       animation6.kill();
     };
-  });
+  }, [countDownDate]);
   return (
     <section className="events" id="events">
       <Dots className="dots dots-up" />

@@ -55,7 +55,7 @@ function Skills() {
       animation1.kill();
       animation2.kill();
     };
-  });
+  }, [q]);
 
   return (
     <section className="skills" id="skills" ref={el}>

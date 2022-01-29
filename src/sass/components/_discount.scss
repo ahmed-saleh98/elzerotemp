@@ -104,3 +104,25 @@
     }
   }
 }
+
+.dark-mode {
+  .discount {
+    .form {
+      background-color: $sectionDarkColor;
+      form {
+        input {
+          background-color: $boxDarkColor;
+          color: white !important;
+          &:focus {
+            color: white !important;
+          }
+        }
+      }
+    }
+    .content {
+      p {
+        color: white !important;
+      }
+    }
+  }
+}

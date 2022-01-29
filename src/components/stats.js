@@ -30,7 +30,7 @@ function Stats() {
       stagger: 0.1,
     });
     return () => animation.kill();
-  });
+  }, []);
   return (
     <section className="stats text-center" id="stats">
       <h2>Our Awesome Stats</h2>

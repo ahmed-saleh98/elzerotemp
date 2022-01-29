@@ -33,7 +33,7 @@
         margin: 0 0 10px;
       }
       .title {
-        color: #777;
+        color: $pColor;
         margin-bottom: 10px;
         display: block;
       }
@@ -42,9 +42,32 @@
       }
       p {
         line-height: 1.5;
-        color: #777;
+        color: $pColor;
         margin-top: 10px;
         margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.dark-mode {
+  .testimonials {
+    background-color: $sectionDarkColor;
+    .container {
+      .box {
+        box-shadow: 0 2px 4px rgb(0 0 0);
+        img {
+          border: 10px solid $sectionDarkColor;
+        }
+        .title {
+          color: $pDarkColor;
+        }
+        &:hover {
+          box-shadow: 0 0 15px rgb(0 0 0);
+          img {
+            box-shadow: 0 0 15px rgb(0 0 0);
+          }
+        }
       }
     }
   }

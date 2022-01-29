@@ -38,7 +38,7 @@
         font-size: 23px;
         line-height: 1.7;
         margin: 5px 0 0;
-        color: #666;
+        color: $pColor;
         max-width: 500px;
         overflow: hidden;
         @media (max-width: 991px) {
@@ -71,6 +71,14 @@
     font-size: 2em;
     &:hover {
       color: $mainColorAlt;
+    }
+  }
+}
+
+.dark-mode {
+  .landing {
+    &::before {
+      background-color: $sectionDarkColor;
     }
   }
 }

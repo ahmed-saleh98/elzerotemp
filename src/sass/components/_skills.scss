@@ -42,3 +42,11 @@
     }
   }
 }
+
+.dark-mode {
+  .skills {
+    .progress {
+      background-color: $boxDarkColor !important;
+    }
+  }
+}

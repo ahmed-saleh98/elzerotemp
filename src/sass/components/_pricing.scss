@@ -8,7 +8,7 @@
     gap: 30px;
     .box {
       position: relative;
-      box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+      box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%);
       transition: $mainTransition;
       background: white;
       text-align: center;
@@ -84,7 +84,7 @@
         color: $mainColor;
       }
       .time {
-        color: #777;
+        color: $pColor;
       }
       ul {
         text-align: left;
@@ -112,6 +112,38 @@
           background-color: $mainColorAlt;
           border-color: $mainColorAlt;
           color: white;
+        }
+      }
+    }
+  }
+}
+
+.dark-mode {
+  .pricing {
+    background-color: $sectionDarkColor;
+    .container {
+      .box {
+        &::before,
+        &::after {
+          background-color: $darkColor;
+        }
+        &.popular {
+          .label {
+            &::before {
+              border-color: transparent transparent black;
+            }
+          }
+          &:hover {
+            .label {
+              &::before {
+                border-color: transparent transparent $darkColor;
+                transition-delay: 0.2s;
+              }
+            }
+          }
+        }
+        li {
+          border-top: 1px solid $sectionDarkColor !important;
         }
       }
     }

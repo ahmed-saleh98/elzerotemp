@@ -33,7 +33,7 @@ function Featuers() {
       stagger: 0.5,
       clearProps: true,
     });
-  });
+  }, []);
   return (
     <section className="features" id="features">
       <Title>Features</Title>
