@@ -130,7 +130,7 @@
         &.popular {
           .label {
             &::before {
-              border-color: transparent transparent black;
+              border-color: transparent transparent $boxDarkColor;
             }
           }
           &:hover {
