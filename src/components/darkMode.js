@@ -27,15 +27,13 @@ function DarkTheme() {
   }, [darkMode]);
 
   return (
-    <div>
-      <button className="toggle-theme" onClick={(e) => handleThemeChange()}>
-        {darkMode ? (
-          <FaRegMoon style={{ color: "#888" }} />
-        ) : (
-          <FaRegSun style={{ color: "gold" }} />
-        )}
-      </button>
-    </div>
+    <button className="toggle-theme" onClick={(e) => handleThemeChange()}>
+      {darkMode ? (
+        <FaRegMoon style={{ color: "#888" }} />
+      ) : (
+        <FaRegSun style={{ color: "gold" }} />
+      )}
+    </button>
   );
 }
 

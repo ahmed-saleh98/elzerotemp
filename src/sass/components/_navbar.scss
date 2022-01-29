@@ -3,6 +3,7 @@
   padding: 0 !important;
   .container {
     position: relative;
+    flex-wrap: wrap;
     @media (max-width: 991px) {
       justify-content: center;
     }

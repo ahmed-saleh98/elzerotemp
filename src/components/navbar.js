@@ -17,7 +17,7 @@ function NavBar() {
           />{" "}
           Ahmed Saleh
         </Navbar.Brand>
-        <DarkTheme />
+
         <Nav as="ul">
           <Nav.Item as="li">
             <Nav.Link href="#articles">Articles</Nav.Link>
@@ -32,6 +32,7 @@ function NavBar() {
             <Nav.Link href="#megamenu">Other Links</Nav.Link>
             <MegaMenu />
           </Nav.Item>
+          <DarkTheme />
         </Nav>
       </Container>
     </Navbar>
